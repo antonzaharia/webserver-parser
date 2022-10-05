@@ -1,4 +1,5 @@
 # Log files parser
+A `Parser` class that takes as argument a `.log` file in format `[path] [ip]` and counts every unique visit.
 
 ### Demo:
 1. Clone this repo
