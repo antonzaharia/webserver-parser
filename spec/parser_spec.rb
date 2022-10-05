@@ -2,10 +2,10 @@ require './lib/parser.rb'
 
 describe 'Parser' do
   describe '.parse_log_file' do
-    let(:test1) { 'test1.log' }
-    let(:test2) { 'test2.log' }
-    let(:test3) { 'test3.log' }
-    let(:test4) { 'test4.log' }
+    let(:test1) { './spec/test1.log' }
+    let(:test2) { './spec/test2.log' }
+    let(:test3) { './spec/test3.log' }
+    let(:test4) { './spec/test4.log' }
 
     it 'should be able to add new view' do
       parser = Parser.new(file: test1)

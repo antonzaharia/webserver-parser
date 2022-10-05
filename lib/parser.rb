@@ -7,5 +7,9 @@ class Parser
   attr_reader :views
 
   def parse_log_file
+    lines = File.readlines @file
+    lines.each do |line|
+      @views << line
+    end
   end
 end
