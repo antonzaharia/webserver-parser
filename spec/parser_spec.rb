@@ -8,25 +8,25 @@ describe 'Parser' do
     let(:test4) { 'test4.log' }
 
     it 'should be able to add new view' do
-      parser = Parser.new(test1)
+      parser = Parser.new(file: test1)
       parser.parse_log_file
 
       expect(parser.views.size).to eq(1)
     end
     it 'should be able to add views to different pages' do
-      parser = Parser.new(test2)
+      parser = Parser.new(file: test2)
       parser.parse_log_file
 
       expect(parser.views.size).to eq(2)
     end
     it 'should be able to increase the count on the same views' do
-      parser = Parser.new(test3)
+      parser = Parser.new(file: test3)
       parser.parse_log_file
 
       expect(parser.views.first[:count]).to eq(2)
     end
     it 'should not count duplicated views' do
-      parser = Parser.new(test4)
+      parser = Parser.new(file: test4)
       parser.parse_log_file
 
       expect(parser.views.first[:count]).to eq(2)
