@@ -29,7 +29,7 @@ describe 'Parser' do
       parser = Parser.new(file: test4)
       parser.parse_log_file
 
-      expect(parser.views.first[:count]).to eq(2)
+      expect(parser.views.first[:count]).to eq(1)
     end
   end
   describe '.read_views' do
