@@ -11,4 +11,4 @@ A `Parser` class that takes as argument a `.log` file in format `[path] [ip]` an
  - New page view
  - New view on an existing page
  - Duplicated view
-2. A breakdown with all the pages visited with how many views it received order in view count descending order
+2. At the end a breakdown with all the pages visited with how many views it received ordered in view count descending order
