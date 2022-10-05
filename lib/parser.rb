@@ -12,8 +12,11 @@ class Parser
       (path, ip) = line.split()
       page = @views.find { |view| view[:path] == path }
       if page
-        page[:ips] << ip
-        page[:count] += 1
+        if page[:ips].include?(ip)
+        else
+          page[:ips] << ip
+          page[:count] += 1
+        end
       else
         @views << { path:, ips: [ip], count: 1 }
       end
