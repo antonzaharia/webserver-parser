@@ -33,8 +33,14 @@ describe 'Parser' do
     end
   end
   describe '.read_views' do
+    let(:test5) { './spec/test5.log' }
+
     it 'print the views in the right format' do
-      expect(false).to eq(true)
+      parser = Parser.new(file: test5)
+      parser.parse_log_file
+
+      expect(parser.humanize_view(parser.views.first)).to eq('/home 2 unique views')
+      expect(parser.humanize_view(parser.views[1])).to eq('/contact 3 unique views')
     end
   end
 end
